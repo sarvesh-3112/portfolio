@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
       technologies: ['React', 'tailwind', 'Node.js', 'PostgreSQL', 'Stripe', 'html 5', 'css 3'],
       liveDemo: 'https://portfolio-blush-omega-yq0s8saymv.vercel.app',
       github: 'https://github.com/sarvesh-3112/portfolio',
-      image: 'https://res.cloudinary.com/dv2nqjc47/image/upload/WhatsApp_Image_2025-09-21_at_15.12.34_29508fdf_ujdb2p'
+      image: 'https://i.pinimg.com/1200x/8d/04/cc/8d04cc90d4da5aabfafccee4c382f84c.jpg'
     },
     {
       title: 'Task Management SaaS',
