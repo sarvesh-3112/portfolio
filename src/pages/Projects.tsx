@@ -4,12 +4,12 @@ import { ExternalLink, Github, Code2, Layers } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Portfolio',
       description: 'A full-featured e-commerce solution with real-time inventory management, payment processing, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
-      liveDemo: '#',
-      github: '#',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg'
+      technologies: ['React', 'tailwind', 'Node.js', 'PostgreSQL', 'Stripe', 'html 5', 'css 3'],
+      liveDemo: 'https://portfolio-blush-omega-yq0s8saymv.vercel.app',
+      github: 'https://github.com/sarvesh-3112/portfolio',
+      image: 'https://res.cloudinary.com/dv2nqjc47/image/upload/WhatsApp_Image_2025-09-21_at_15.12.34_29508fdf_ujdb2p'
     },
     {
       title: 'Task Management SaaS',
