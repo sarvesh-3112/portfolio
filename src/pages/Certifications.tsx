@@ -11,45 +11,6 @@ const Certifications: React.FC = () => {
     }
   ];
 
-  const projectCertifications = [
-    {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: 'March 2023',
-      description: 'Comprehensive understanding of AWS cloud architecture and services.'
-    },
-    {
-      title: 'MongoDB Certified Developer',
-      issuer: 'MongoDB University',
-      date: 'January 2023',
-      description: 'Advanced knowledge of MongoDB database design and development.'
-    },
-    {
-      title: 'React Professional Certification',
-      issuer: 'Meta',
-      date: 'November 2022',
-      description: 'Expertise in React development and best practices.'
-    }
-  ];
-
-  const exposWorkshops = [
-    {
-      event: 'TechCrunch Disrupt 2023',
-      role: 'Presenter',
-      description: 'Presented innovative AI-powered web application to industry leaders and investors.'
-    },
-    {
-      event: 'React Conference 2023',
-      role: 'Workshop Leader',
-      description: 'Led hands-on workshop on "Advanced React Patterns and Performance Optimization".'
-    },
-    {
-      event: 'DevOps Summit 2022',
-      role: 'Participant',
-      description: 'Attended sessions on cloud architecture and modern deployment strategies.'
-    }
-  ];
-
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
       <div className="space-y-12">
