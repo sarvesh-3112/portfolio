@@ -1,0 +1,91 @@
+import React from 'react';
+import { Mail, Phone, MapPin, Linkedin, Github, Download } from 'lucide-react';
+import SkillsSection from '../components/SkillsSection';
+
+const AboutMe: React.FC = () => {
+  return (
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+      <div className="grid lg:grid-cols-3 gap-8">
+        {/* Profile Section */}
+        <div className="lg:col-span-1">
+          <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 text-center sticky top-24">
+            {/* Profile Photo Placeholder */}
+            <div className="w-48 h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span className="text-white text-6xl font-light">J</span>
+            </div>
+            
+            <h1 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">
+              John Developer
+            </h1>
+            <p className="text-lg text-blue-600 font-medium mb-6">
+              Full Stack Developer
+            </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 text-sm lg:text-base">
+              <div className="flex items-center justify-center space-x-3 text-slate-600">
+                <MapPin size={18} className="text-blue-500" />
+                <span>San Francisco, CA</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-slate-600">
+                <Mail size={18} className="text-blue-500" />
+                <span>john@example.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-slate-600">
+                <Phone size={18} className="text-blue-500" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex justify-center space-x-4 mt-6">
+              <a href="#" className="p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                <Linkedin size={20} className="text-blue-600" />
+              </a>
+              <a href="#" className="p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
+                <Github size={20} className="text-slate-600" />
+              </a>
+            </div>
+            
+            {/* Download Resume Button */}
+            <button className="w-full mt-6 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+              <Download size={18} />
+              <span>Download Resume</span>
+            </button>
+          </div>
+        </div>
+        
+        {/* Content Section */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* About Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+            <h2 className="text-3xl font-bold text-slate-800 mb-6">About Me</h2>
+            <div className="prose prose-slate max-w-none">
+              <p className="text-lg leading-relaxed text-slate-600 mb-4">
+                I'm a passionate Full Stack Developer with over 5 years of experience creating 
+                scalable web applications and robust backend systems. My journey in technology 
+                started with a curiosity for problem-solving and has evolved into a deep expertise 
+                in modern web technologies.
+              </p>
+              <p className="text-lg leading-relaxed text-slate-600 mb-4">
+                I specialize in React, Node.js, and cloud technologies, with a strong focus on 
+                building user-centric applications that deliver exceptional experiences. I thrive 
+                in collaborative environments and enjoy mentoring junior developers.
+              </p>
+              <p className="text-lg leading-relaxed text-slate-600">
+                When I'm not coding, you'll find me contributing to open-source projects, 
+                learning new technologies, or sharing knowledge through technical writing and 
+                community presentations.
+              </p>
+            </div>
+          </div>
+          
+          {/* Skills Section */}
+          <SkillsSection />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutMe;
