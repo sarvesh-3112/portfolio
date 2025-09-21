@@ -10,13 +10,14 @@ const AboutMe: React.FC = () => {
         <div className="lg:col-span-1">
           <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 text-center sticky top-24">
             {/* Profile Photo Placeholder */}
-            <div className="w-48 h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <img 
-                  src="https://res.cloudinary.com/dv2nqjc47/image/upload/WhatsApp_Image_2025-09-21_at_15.12.34_29508fdf_ujdb2p" 
-                  alt="Sri Sarvesh" 
-                  className="w-full h-full object-cover"
-                />
+            <div className="w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden shadow-lg">
+              <img 
+                src="https://res.cloudinary.com/dv2nqjc47/image/upload/WhatsApp_Image_2025-09-21_at_15.12.34_29508fdf_ujdb2p" 
+                alt="Sri Sarvesh" 
+                className="w-full h-full object-cover"
+              />
             </div>
+
             
             <h1 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">
               Sri Sarvesh R
