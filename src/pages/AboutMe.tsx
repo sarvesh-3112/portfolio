@@ -11,7 +11,11 @@ const AboutMe: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 text-center sticky top-24">
             {/* Profile Photo Placeholder */}
             <div className="w-48 h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <span className="text-white text-6xl font-light">J</span>
+                <img 
+                  src="/path-to-your-image.jpg" 
+                  alt="Sri Sarvesh" 
+                  className="w-full h-full object-cover"
+                  />
             </div>
             
             <h1 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">
