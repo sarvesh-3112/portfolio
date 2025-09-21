@@ -10,7 +10,7 @@ const Certifications: React.FC = () => {
       learnings: 'Gained hands-on experience with React ecosystem, collaborated on enterprise-level applications, and learned agile development practices.'
     },
     {
-      company: 'Digital Solutions Co.',
+      company: 'Edu Tantr',
       duration: 'January 2023 - March 2023',
       role: 'Full Stack Development Intern',
       learnings: 'Developed REST APIs, integrated third-party services, and participated in code reviews with senior developers.'
