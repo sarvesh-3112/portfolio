@@ -14,8 +14,7 @@ const AboutMe: React.FC = () => {
                 <img 
                   src="/path-to-your-image.jpg" 
                   alt="Sri Sarvesh" 
-                  className="w-full h-full object-cover"
-                  />
+                  className="w-full h-full object-cover"/>
             </div>
             
             <h1 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">
