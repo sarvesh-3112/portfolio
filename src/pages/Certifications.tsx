@@ -1,16 +1,10 @@
-import React from 'react';
+u import React from 'react';
 import { Briefcase, Award, Users, Server } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   const internships = [
     {
-      company: 'Tech Innovators Inc.',
-      duration: 'June 2022 - August 2022',
-      role: 'Frontend Development Intern',
-      learnings: 'Gained hands-on experience with React ecosystem, collaborated on enterprise-level applications, and learned agile development practices.'
-    },
-    {
-      company: 'Digital Solutions Co.',
+      company: 'Edu Tantr',
       duration: 'January 2023 - March 2023',
       role: 'Full Stack Development Intern',
       learnings: 'Developed REST APIs, integrated third-party services, and participated in code reviews with senior developers.'
