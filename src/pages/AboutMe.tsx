@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
             </div>
             
             <h1 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-2">
-              John Developer
+              Sri Sarvesh R
             </h1>
             <p className="text-lg text-blue-600 font-medium mb-6">
               Full Stack Developer
@@ -25,24 +25,24 @@ const AboutMe: React.FC = () => {
             <div className="space-y-3 text-sm lg:text-base">
               <div className="flex items-center justify-center space-x-3 text-slate-600">
                 <MapPin size={18} className="text-blue-500" />
-                <span>San Francisco, CA</span>
+                <span>Cuddalore TN</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-slate-600">
                 <Mail size={18} className="text-blue-500" />
-                <span>john@example.com</span>
+                <span>srisarvesh2006@gmail.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-slate-600">
                 <Phone size={18} className="text-blue-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6379315200 </span>
               </div>
             </div>
             
             {/* Social Links */}
             <div className="flex justify-center space-x-4 mt-6">
-              <a href="#" className="p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+              <a href="https://www.linkedin.com/in/srisarvesh-r-7ab21b325" className="p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                 <Linkedin size={20} className="text-blue-600" />
               </a>
-              <a href="#" className="p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
+              <a href="https://github.com/sarvesh-3112" className="p-3 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors">
                 <Github size={20} className="text-slate-600" />
               </a>
             </div>
