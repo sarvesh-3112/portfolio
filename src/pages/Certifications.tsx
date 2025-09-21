@@ -1,13 +1,58 @@
-u import React from 'react';
+import React from 'react';
 import { Briefcase, Award, Users, Server } from 'lucide-react';
 
 const Certifications: React.FC = () => {
   const internships = [
     {
-      company: 'Edu Tantr',
+      company: 'Tech Innovators Inc.',
+      duration: 'June 2022 - August 2022',
+      role: 'Frontend Development Intern',
+      learnings: 'Gained hands-on experience with React ecosystem, collaborated on enterprise-level applications, and learned agile development practices.'
+    },
+    {
+      company: 'Digital Solutions Co.',
       duration: 'January 2023 - March 2023',
       role: 'Full Stack Development Intern',
       learnings: 'Developed REST APIs, integrated third-party services, and participated in code reviews with senior developers.'
+    }
+  ];
+
+  const projectCertifications = [
+    {
+      title: 'AWS Certified Solutions Architect',
+      issuer: 'Amazon Web Services',
+      date: 'March 2023',
+      description: 'Comprehensive understanding of AWS cloud architecture and services.'
+    },
+    {
+      title: 'MongoDB Certified Developer',
+      issuer: 'MongoDB University',
+      date: 'January 2023',
+      description: 'Advanced knowledge of MongoDB database design and development.'
+    },
+    {
+      title: 'React Professional Certification',
+      issuer: 'Meta',
+      date: 'November 2022',
+      description: 'Expertise in React development and best practices.'
+    }
+  ];
+
+  const exposWorkshops = [
+    {
+      event: 'TechCrunch Disrupt 2023',
+      role: 'Presenter',
+      description: 'Presented innovative AI-powered web application to industry leaders and investors.'
+    },
+    {
+      event: 'React Conference 2023',
+      role: 'Workshop Leader',
+      description: 'Led hands-on workshop on "Advanced React Patterns and Performance Optimization".'
+    },
+    {
+      event: 'DevOps Summit 2022',
+      role: 'Participant',
+      description: 'Attended sessions on cloud architecture and modern deployment strategies.'
     }
   ];
 
