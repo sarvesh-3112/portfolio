@@ -7,7 +7,8 @@ const Projects: React.FC = () => {
       title: 'HealthAI – Full Stack Healthcare Prediction Platform',
       description: 'A full-stack AI-powered healthcare platform with three role-based apps (Patient, Hospital, Admin) enabling real-time disease risk prediction and system monitoring. FastAPI backend with ML integration; Next.js frontend deployed on Vercel, backend on Render.',
       technologies: ['Next.js', 'FastAPI', 'Python', 'Scikit-learn', 'Render', 'Vercel'],
-      liveDemo: '#',
+      liveDemo: 'https://healthai-patient.vercel.app/',
+      showLiveDemo: true,
       github: '#',
       image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg'
     },
@@ -15,7 +16,8 @@ const Projects: React.FC = () => {
       title: 'Smart Footstep Power Generation System',
       description: 'A piezoelectric-based energy harvesting system that converts mechanical footstep pressure into usable electrical energy for low-power IoT devices. Integrated piezoelectric sensors with Arduino to capture and monitor real-time voltage output.',
       technologies: ['Arduino', 'Piezoelectric Sensors', 'Embedded C', 'IoT'],
-      liveDemo: '#',
+      liveDemo: '',
+      showLiveDemo: false,
       github: '#',
       image: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg'
     },
@@ -32,7 +34,8 @@ const Projects: React.FC = () => {
         'GitHub',
         'Vercel'
       ],
-      liveDemo: '#',
+      liveDemo: 'https://smart-expense-manager-sooty.vercel.app/',
+      showLiveDemo: true,
       github: '#',
       image:
         'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
@@ -83,13 +86,17 @@ const Projects: React.FC = () => {
                   
                   {/* Links */}
                   <div className="flex space-x-4">
-                    <a
-                      href={project.liveDemo}
-                      className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.showLiveDemo && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        <ExternalLink size={16} />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                     <a
                       href={project.github}
                       className="flex items-center space-x-2 px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors"
