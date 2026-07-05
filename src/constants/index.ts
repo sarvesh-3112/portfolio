@@ -45,7 +45,7 @@ export const SKILLS = [
   {
     category: "Tools",
     color: "#10b981",
-    items: ["Git", "GitHub", "VS Code", "Render", "Vercel", "Chart.js", "Arduino"],
+    items: ["Git", "GitHub", "VS Code", "Render", "Vercel", "Chart.js"],
   },
 ];
 
