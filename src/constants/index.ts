@@ -79,10 +79,10 @@ export const PROJECTS = [
 ];
 
 export const CERTIFICATIONS = [
+  { title: "Full Stack Development", issuer: "Edu Tantr", year: "2024", color: "#f59e0b" },
   { title: "Python for Data Science", issuer: "NPTEL", year: "2024", color: "#6C63FF" },
   { title: "Machine Learning", issuer: "NPTEL", year: "2024", color: "#00E5FF" },
   { title: "Cyber Security", issuer: "NPTEL", year: "2024", color: "#a855f7" },
-  { title: "Full Stack Development", issuer: "Edu Tantr", year: "2024", color: "#f59e0b" },
 ];
 
 export const EXPERIENCE = [
