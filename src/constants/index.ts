@@ -57,7 +57,7 @@ export const PROJECTS = [
     description:
       "AI-powered healthcare platform featuring Patient, Hospital, and Admin dashboards. Integrates machine learning for disease prediction, role-based authentication, and comprehensive REST APIs with a fully responsive design.",
     tech: ["Next.js", "FastAPI", "Python", "Scikit-learn", "Render", "Vercel"],
-    github: "https://github.com/srisarvesh",
+    github: "https://github.com/sarvesh-3112/HealthAI-FullStack-Healthcare-Platform",
     live: "https://healthai-patient.vercel.app/",
     color: "#6C63FF",
     gradient: "from-purple-600/20 to-blue-600/20",
