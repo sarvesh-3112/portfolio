@@ -1,7 +1,8 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Send, Mail, MapPin, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon } from "@/components/ui/SocialIcons";
 import { PERSONAL_INFO } from "@/constants";
 
@@ -56,8 +57,11 @@ export default function ContactSection() {
   const [sending, setSending]       = useState(false);
   const [sent, setSent]             = useState(false);
   const [errors, setErrors]         = useState<Record<string, string>>({});
-  const [submitError, setSubmitError] = useState<string | null>(null);
   const [focusedField, setFocused]  = useState<string | null>(null);
+
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!);
+  }, []);
 
   /* Client-side validation (mirrors server) */
   const validate = () => {
@@ -73,31 +77,40 @@ export default function ContactSection() {
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
-    setSubmitError(null);
     setSending(true);
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, email: form.email, message: form.message }),
-      });
+    const templateParams = {
+      from_name: form.name,
+      reply_to: form.email,
+      message: form.message,
+    };
 
-      if (res.ok) {
-        setSent(true);
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setSubmitError(
-          data?.error ?? "Something went wrong. Please email me directly at srisarvesh2006@gmail.com"
-        );
-      }
-    } catch {
-      setSubmitError(
-        "Something went wrong. Please email me directly at srisarvesh2006@gmail.com"
-      );
-    } finally {
+    try {
+      // Send both emails in parallel
+      await Promise.all([
+        // Notification email to Sri Sarvesh
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_NOTIFICATION_TEMPLATE!,
+          templateParams
+        ),
+        // Auto-reply to visitor
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE!,
+          templateParams
+        ),
+      ]);
+
       setSending(false);
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSending(false);
+      setErrors({
+        submit: "Failed to send message. Please email me directly at srisarvesh2006@gmail.com",
+      });
     }
   };
 
@@ -321,18 +334,9 @@ export default function ContactSection() {
                   </div>
 
                   {/* Inline submit error */}
-                  {submitError && (
-                    <p style={{
-                      fontSize: "0.8rem",
-                      color: "#f87171",
-                      background: "rgba(248,113,113,0.08)",
-                      border: "1px solid rgba(248,113,113,0.2)",
-                      borderRadius: "0.625rem",
-                      padding: "0.75rem 1rem",
-                      margin: 0,
-                      lineHeight: 1.5,
-                    }}>
-                      {submitError}
+                  {errors.submit && (
+                    <p className="text-red-400 text-sm text-center py-2 px-4 rounded-xl bg-red-500/10 border border-red-500/20">
+                      {errors.submit}
                     </p>
                   )}
 
