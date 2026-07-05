@@ -73,7 +73,6 @@ function SkillCard({
       onMouseLeave={handleLeave}
       whileHover={{
         scale: 1.06,
-        // @ts-expect-error framer-motion accepts string style values in whileHover
         borderColor: color,
         boxShadow: `0 0 22px ${color}44, 0 8px 32px rgba(0,0,0,0.4)`,
       }}
