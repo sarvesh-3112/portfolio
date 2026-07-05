@@ -358,7 +358,7 @@ export default function ProjectsSection() {
           style={{ textAlign: "center", marginTop: "3rem" }}
         >
           <motion.a
-            href={PROJECTS[0].github}
+            href="https://github.com/sarvesh-3112"
             target="_blank"
             rel="noreferrer"
             whileHover={{ scale: 1.05, boxShadow: `0 0 30px ${ACCENT}44` }}
