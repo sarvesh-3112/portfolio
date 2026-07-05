@@ -15,9 +15,9 @@ export const PERSONAL_INFO = {
     "CS Undergraduate",
   ],
   social: {
-    github: "https://github.com/srisarvesh",
-    linkedin: "https://linkedin.com/in/srisarvesh",
-    leetcode: "https://leetcode.com/srisarvesh",
+    github: "https://github.com/sarvesh-3112",
+    linkedin: "https://www.linkedin.com/in/srisarveshr/",
+    leetcode: "https://leetcode.com/u/srisarveshr/",
   },
 };
 
