@@ -6,12 +6,12 @@ import { GitHubIcon } from "@/components/ui/SocialIcons";
 import { PROJECTS } from "@/constants";
 
 /* ─── Design tokens ─────────────────────────────────────────────────────── */
-const ACCENT  = "#6C63FF";
-const CYAN    = "#00E5FF";
-const PURPLE  = "#a855f7";
+const ACCENT = "#6C63FF";
+const CYAN = "#00E5FF";
+const PURPLE = "#a855f7";
 const SLATE_400 = "#94a3b8";
 const SLATE_500 = "#64748b";
-const BG        = "#050816";
+const BG = "#050816";
 
 /* ─── Project emoji map ─────────────────────────────────────────────────── */
 const EMOJIS: Record<number, string> = { 1: "🏥", 2: "💰", 3: "⚡" };
@@ -41,14 +41,14 @@ function ProjectCard({
   /* 3-D tilt */
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
-  const rotateX = useSpring(useTransform(my, [-120, 120], [7, -7]),  { stiffness: 200, damping: 30 });
-  const rotateY = useSpring(useTransform(mx, [-120, 120], [-7,  7]), { stiffness: 200, damping: 30 });
+  const rotateX = useSpring(useTransform(my, [-120, 120], [7, -7]), { stiffness: 200, damping: 30 });
+  const rotateY = useSpring(useTransform(mx, [-120, 120], [-7, 7]), { stiffness: 200, damping: 30 });
 
   const handleMove = (e: React.MouseEvent) => {
     if (!ref.current) return;
     const r = ref.current.getBoundingClientRect();
-    mx.set(e.clientX - r.left - r.width  / 2);
-    my.set(e.clientY - r.top  - r.height / 2);
+    mx.set(e.clientX - r.left - r.width / 2);
+    my.set(e.clientY - r.top - r.height / 2);
   };
   const handleLeave = () => { mx.set(0); my.set(0); setHovered(false); };
 
