@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Download, Mail, ExternalLink } from "lucide-react";
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon } from "@/components/ui/SocialIcons";
@@ -80,6 +81,7 @@ const CODE_SNIPPETS = [
 export default function HeroSection() {
   const [mounted, setMounted] = useState(false);
   const dots = useMemo(() => makeDots(), []);
+  const router = useRouter();
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -274,8 +276,8 @@ export default function HeroSection() {
           </motion.button>
 
           {/* Download Resume */}
-          <motion.a
-            href="/resume.pdf"
+          <motion.button
+            onClick={() => router.push("/resume")}
             whileHover={{ scale: 1.06, boxShadow: "0 0 25px rgba(0,229,255,0.2)" }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-2 font-bold text-white cursor-pointer"
@@ -292,7 +294,7 @@ export default function HeroSection() {
           >
             <Download size={16} />
             Download Resume
-          </motion.a>
+          </motion.button>
 
           {/* Contact Me */}
           <motion.button
